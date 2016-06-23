@@ -9,6 +9,9 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
+  # To prevent vagrant error "cannot render console from"
+  config.web_console.whitelisted_ips = '172.28.128.1'
+
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
